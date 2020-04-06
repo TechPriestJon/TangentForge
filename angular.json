@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.sass"
             ],
             "scripts": []
@@ -90,7 +91,7 @@
                   "maximumError": "10kb"
                 }
               ],
-              "baseHref": "https://techpriestjon.github.io/TangentForge"
+              "baseHref": "https://techpriestjon.github.io/TangentForge/"
             },
             "dev": {
               "fileReplacements": [
@@ -183,6 +184,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "TangentForge"
 }
