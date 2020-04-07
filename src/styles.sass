@@ -1,9 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
 
-$black: #000
 $primary-text: #CCC
+$secondary-text: #EEE
+
+$primary-shading: #0A0A0A
+
+$primary-background: #111
+$secondary-background: #333
+
+
+
 $secondary-bck: #995
 
 body
-    background-color: $black
+    background-color: $primary-background
     color: $primary-text
+
+%content-block
+    position: relative
+    padding: 5px
+    margin-right: 10px
+    margin-left: 10px
+    background-color: $secondary-background
+    color: $secondary-text
+    box-shadow: 5px 8px $primary-shading
+    width: calc(100% - 20px)
+
+%flex-block
+    position: relative
+    display: flex
+    flex-direction: column
+    flex-basis: 100%
+    flex: 1
+
+%flex-container
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+%fill-parent-height
+    height: 100%
+
+%fill-parent-width
+    width: 100%    
+
+%fill-parent-height-with-buffer
+    margin-top: 2%
+    margin-bottom: 2%
+    height: 90%
+
+%small-side-block
+    @extend %flex-block, %fill-parent-height-with-buffer
+    min-width: 140px
+    max-width: 220px
+
+%large-middle-block
+    @extend %flex-block, %fill-parent-height-with-buffer
+    min-width: 240px
+
+.full-page
+    height: 100vh
+    width: 100%
+
+.fill-parent
+    @extend %fill-parent-height, %fill-parent-width
+
+.flex-block-container
+    @extend %flex-container
+
+
