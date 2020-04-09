@@ -78,3 +78,29 @@
     animation-delay: 0.25s
     margin-top: 50px
     margin-bottom: 50px
+
+.spin-cog
+    display: block
+    margin-left: auto
+    margin-right: auto
+    width: 500px
+    height: 500px
+    transform-origin: center center
+    -webkit-animation: spin-cog 4.5s cubic-bezier(.8, .2, .5, 1) infinite
+    animation: spin-cog 4.5s cubic-bezier(.8, .2, .5, 1) infinite
+    animation-delay: 5s
+
+@-webkit-keyframes spin-cog
+    0%
+        transform: rotate(120deg)
+    100% 
+        transform: rotate(0deg)
+        left: 0%
+
+@keyframes spin-cog
+    0%
+        transform: rotate(120deg)
+    100% 
+        transform: rotate(0deg)
+        left: 0%
+
