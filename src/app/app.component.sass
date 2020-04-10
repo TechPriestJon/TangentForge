@@ -8,7 +8,7 @@
 
 .left-nav
     @extend %content-block, %fill-parent-height
-    left: -100%
+    left: -110%
     transform-origin: center left
     transform: rotateY(200deg) translateX(-100%)
     -webkit-animation: slide-left 5.5s forwards
@@ -16,6 +16,7 @@
     background-image: url("../assets/backgroundmetal2a.png")
     background-repeat: no-repeat
     background-size: 100% 100% 
+    animation-delay: 1s
 
 .right-nav
     @extend %content-block, %fill-parent-height
@@ -27,6 +28,7 @@
     background-image: url("../assets/backgroundmetal2b.png")
     background-repeat: no-repeat
     background-size: 100% 100% 
+    animation-delay: 1s
 
 @-webkit-keyframes slide-left
     100% 
@@ -70,7 +72,7 @@
     -webkit-animation: slide-up 4s forwards
     -webkit-animation-delay: 0.25s
     animation: slide-up 4s forwards
-    animation-delay: 0.25s
+    animation-delay: 1.25s
     margin-top: 50px
     margin-bottom: 50px
     min-width: 500px
@@ -137,6 +139,10 @@
     align-items: center
     justify-content: center
     text-align: center
+    font-size: 1.3em !important
+
+.side-button:hover
+    font-weight: bold
 
 .center-button
     align-items: center
@@ -149,10 +155,12 @@
 .mat-raised-button
     margin-bottom: 20px
     text-align: center
+    white-space: pre-wrap !important
 
 .mat-raised-button:disabled, .mat-raised-button:disabled:hover
     color: $white
     border: 1px solid $primary-background !important
+    background: transparent
 
 .bg-metal
     background-image: url("../assets/backgroundmetal-sml.png")
