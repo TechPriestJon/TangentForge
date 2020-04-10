@@ -9,10 +9,23 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+@import 'styles';
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$TangentForge-primary: mat-palette($mat-indigo);
+
+$tg-dark-primary: (
+    50: $primary-shade,
+    100: $primary-shade-hover,
+    contrast: (
+        50: $light-primary-text,
+        100: $dark-primary-text
+    )
+);
+
+$TangentForge-primary: mat-palette($tg-dark-primary, 50);
+$TangentForge-primary-hover: mat-palette($tg-dark-primary, 100);
 $TangentForge-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -29,3 +42,14 @@ $TangentForge-theme: mat-light-theme($TangentForge-primary, $TangentForge-accent
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-raised-button:hover {
+    background-color: $primary-shade-hover;
+    border: 2px solid $white !important;
+    color: $black;
+};
+
+.mat-raised-button {
+    border: 1px solid $primary-shade-hover !important;
+    font: 1em courier;
+};
