@@ -1,0 +1,104 @@
+@import 'styles.sass'
+
+.right-nav-container
+    @extend %small-side-block
+    float: left
+
+.left-nav-container
+    @extend %small-side-block
+    float: left
+    margin-right: 15px
+
+.left-nav
+    @extend %content-block, %fill-parent-height
+    left: -110%
+    transform-origin: center left
+    transform: rotateY(200deg) translateX(-100%)
+    -webkit-animation: slide-left 5.5s forwards
+    animation: slide-left 5.5s forwards
+    background-image: url("../../assets/backgroundmetal2a.png")
+    background-repeat: no-repeat
+    background-size: 100% 100% 
+    animation-delay: 1s
+
+.right-nav
+    @extend %content-block, %fill-parent-height
+    left: 100%
+    transform-origin: center right
+    transform: rotateY(140deg) translateX(100%)
+    -webkit-animation: slide-right 4.5s forwards
+    animation: slide-right 4.5s forwards
+    background-image: url("../../assets/backgroundmetal2b.png")
+    background-repeat: no-repeat
+    background-size: 100% 100% 
+    animation-delay: 1s
+
+.center-block-container
+    @extend %large-middle-block
+    float: left
+
+.center-block
+    @extend %content-block, %fill-parent-height
+    transform: translateY(150%)
+    -webkit-animation: slide-up 4s forwards
+    -webkit-animation-delay: 0.25s
+    animation: slide-up 4s forwards
+    animation-delay: 1.25s
+    margin-top: 50px
+    margin-bottom: 50px
+    min-width: 500px
+    background: linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(51,51,51,1) 10%, rgba(51,51,51,1) 35%, rgba(51,51,51,1) 75%, rgba(15,15,15,1) 100%)
+    border-radius: 25px
+    border: 6px solid $black
+    width: calc(100% - 52px)
+    max-height: 75vh
+
+.side-button
+    @extend %flex-block-vertical
+    align-items: center
+    justify-content: center
+    text-align: center
+    font-size: 1.3em !important
+
+.side-button:hover
+    font-weight: bold
+
+.mat-raised-button
+    margin-bottom: 20px
+    text-align: center
+    white-space: pre-wrap !important
+
+.mat-raised-button:disabled, .mat-raised-button:disabled:hover
+    color: $white
+    border: 2px solid $primary-background !important
+    padding: 1px !important
+    background: transparent    
+
+
+@-webkit-keyframes slide-left
+    100% 
+        transform: rotateY(360deg) translateX(0px)
+        left: 0%
+
+@keyframes slide-left
+    100%
+        transform: rotateY(360deg) translateX(0px)
+        left: 0%
+
+@-webkit-keyframes slide-right
+    100% 
+        transform: rotateY(360deg) translateX(0px)
+        left: -25px
+
+@keyframes slide-right
+    100%
+        transform: rotateY(360deg) translateX(0px)
+        left: -25px
+
+@-webkit-keyframes slide-up
+    100% 
+        transform: translateY(0px)
+
+@keyframes slide-up
+    100%
+        transform: translateY(0px) 

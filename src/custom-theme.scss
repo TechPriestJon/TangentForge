@@ -47,10 +47,12 @@ body { margin: 0; font-family: Courier, "Helvetica Neue", sans-serif; }
     border: 2px solid $white !important;
     background: linear-gradient(180deg, rgba(68,112,182,1) 0%, rgba(85,144,238,1) 15%, rgba(85,144,238,1) 50%, rgba(85,144,238,1) 85%, rgba(68,112,182,1) 100%);
     color: $black;
+    padding: 1px !important;
 };
 
 .mat-raised-button {
     border: 1px solid $primary-shade-hover !important;
     background: linear-gradient(180deg, rgba(0,29,34,1) 0%, rgba(0,45,53,1) 15%, rgba(0,45,53,1) 50%, rgba(0,45,53,1) 85%, rgba(0,29,34,1) 100%);
     font: 1em courier;
+    padding: 2px !important;
 };

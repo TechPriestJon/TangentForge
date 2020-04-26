@@ -1,0 +1,82 @@
+@import '../../style-mech.sass'
+   
+.spin-cog
+    position: relative
+    display: block
+    margin-left: auto
+    margin-right: auto
+    width: auto
+    height: 60%
+    margin-top: 8%
+    transform-origin: center center
+    -webkit-animation: spin-cog 4.5s linear infinite
+    animation: spin-cog 4.5s linear infinite
+    animation-delay: 5s    
+    z-index: 1
+
+#central-image
+    z-index: -1
+    position: relative
+    display: block
+    margin-left: auto
+    margin-right: auto
+    width: auto
+    height: 28%
+    top: -44%
+    margin-bottom: -6%
+    transform-origin: center center
+    -webkit-animation: reverse-spin-cog 4.5s linear infinite
+    animation: reverse-spin-cog 4.5s linear infinite
+    animation-delay: 5s
+
+#central-image.button-image
+    -webkit-animation: central-image-spin cubic-bezier(.2, 0, 0, 1) 13.5s infinite
+    animation: central-image-spin 13.5s infinite
+
+
+@-webkit-keyframes spin-cog
+    0%
+        transform: rotate(120deg)
+    100% 
+        transform: rotate(0deg)
+
+@keyframes spin-cog
+    0%
+        transform: rotate(120deg)
+    100% 
+        transform: rotate(0deg)
+
+@-webkit-keyframes reverse-spin-cog
+    0%
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(120deg)
+
+@keyframes reverse-spin-cog
+    0%
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(120deg)
+
+@-webkit-keyframes central-image-spin
+    0%
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(360deg)
+
+@keyframes central-image-spin
+    0%
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(360deg)
+
+.center-button
+    position: relative
+    align-items: center
+    justify-content: center
+    text-align: center
+    margin-left: 40%
+    margin-right: 40%
+    width: 20%
+    bottom: 4%
+

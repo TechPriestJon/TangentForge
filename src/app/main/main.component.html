@@ -1,0 +1,33 @@
+<div class="flex-block-container-vertical full-page">
+  <div class="left-nav-container">
+    <nav class="left-nav flex-block-container-horizontal"> 
+      <button mat-raised-button class="side-button " color="primary" (click)="setCentralImage('info')">ABOUT</button>
+      <button mat-raised-button class="side-button" color="primary" (click)="setCentralImage('games')">GAME CODE</button>
+      <button mat-raised-button class="side-button" color="primary" (click)="setCentralImage('baconsarnie')">BACON SARNIE</button>
+      <button mat-raised-button class="side-button " color="primary" (click)="setCentralImage('verdure')">VERDURE</button>
+      <button mat-raised-button class="side-button" color="primary" (click)="setCentralImage('cuppak')"> CUPPAK</button>
+    </nav>
+  </div>
+  <div class="center-block-container">
+    <main class="center-block">
+        <img class="spin-cog"
+        alt="spinning cog"
+        src="assets/cogspin.png" />
+        <img [ngClass]="{'button-image': buttonImg }" id="central-image"
+        alt="{{imgAltText}}"
+        src="{{imgSrc}}"  />  
+        <button mat-raised-button [disabled]="!buttonImg" class="center-button" color="primary" 
+          routerLink="{{url}}" routerLinkActive="active">ACCESS RECORDS</button>
+    </main>
+  </div>
+  <div class="right-nav-container">
+    <nav class="right-nav flex-block-container-horizontal">
+      <button mat-raised-button class="side-button " color="primary" (click)="setCentralImage('blog')">BLOG</button>
+      <button mat-raised-button class="side-button " color="primary" (click)="setCentralImage('machinelearning')">MACHINE LEARNING</button>
+      <button mat-raised-button class="side-button" color="primary" (click)="setCentralImage('dataanalysis')">DATA ANALYTICS</button>
+      <button mat-raised-button class="side-button" color="primary" (click)="setCentralImage('cybernetics')">CYBERNETICS</button>
+      <button mat-raised-button class="side-button" color="primary" (click)="setCentralImage('preservation')">PRESERVATION</button>
+      <button mat-raised-button class="side-button" color="primary" (click)="setCentralImage('community')">COMMUNITY</button> 
+    </nav>
+  </div>
+</div>
