@@ -33,19 +33,47 @@ body
     box-shadow: 5px 8px $primary-shading
     width: calc(100% - 40px)
 
-%flex-block-horizontal
+%flex-block-horizontal-to-vertical
     position: relative
     display: flex
-    flex-direction: column
     flex-basis: 100%
     flex: 1
+    @media (max-width: 900px)
+        flex-direction: row
+    @media (min-width: 900px)
+        flex-direction: column
 
-%flex-block-vertical
+%flex-block-vertical-to-horizontal
     position: relative
     display: flex
-    flex-direction: row
     flex-basis: 100%
-    flex: 1 
+    flex: 1
+    @media (max-width: 900px)
+        flex-direction: column
+    @media (min-width: 900px)
+        flex-direction: row
+
+%flex-container-vertical-to-horizontal
+    height: 100%
+    width: 100%
+    display: flex
+    @media (max-width: 900px)
+        flex-direction: column
+        flex-wrap: wrap 
+    @media (min-width: 900px)
+        flex-direction: row
+        flex-wrap: wrap
+
+%flex-container-horizontal-to-vertical
+    height: 100%
+    width: 100%
+    display: flex
+    @media (max-width: 900px)
+        flex-direction: row
+        flex-wrap: wrap
+    @media (min-width: 900px)
+        flex-direction: column
+        flex-wrap: wrap 
 
 %flex-container-vertical
     height: 100%
@@ -54,12 +82,6 @@ body
     flex-direction: row
     flex-wrap: wrap
 
-%flex-container-horizontal
-    height: 100%
-    width: 100%
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap 
 
 %fill-parent-height
     height: 100%
@@ -72,33 +94,36 @@ body
     margin-bottom: 2%
     height: 90%
 
+%fill-parent-height-to-width
+    @media (max-width: 900px)
+        width: 100%
+    @media (min-width: 900px)
+        margin-top: 2%
+        margin-bottom: 2%
+        height: 90%
+
 %small-side-block
-    @extend %flex-block-horizontal, %fill-parent-height-with-buffer
-    min-width: 140px
-    max-width: 220px
+    @extend %flex-block-horizontal-to-vertical, %fill-parent-height-to-width
+    @media (min-width: 900px)
+        max-width: 220px
 
 %large-middle-block
-    @extend %flex-block-horizontal, %fill-parent-height-with-buffer
-    min-width: 240px
+    @extend %flex-block-horizontal-to-vertical, %fill-parent-height-to-width
 
 .full-page
-    height: 100vh
     width: 100%
+    @media (min-width: 900px)
+        height: 100vh
+
 
 .fill-parent
-    @extend %fill-parent-height, %fill-parent-width
+    @extend %fill-parent-height-to-width, %fill-parent-width
+
+.flex-block-container-vertical-to-horizontal
+    @extend %flex-container-vertical-to-horizontal
 
 .flex-block-container-vertical
     @extend %flex-container-vertical
 
-.flex-block-container-horizontal
-    @extend %flex-container-horizontal
-
-/* specific block styles */
-
-
-
-
-
-
-
+.flex-block-container-horizontal-to-vertical
+    @extend %flex-container-horizontal-to-vertical

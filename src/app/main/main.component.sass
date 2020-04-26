@@ -33,6 +33,25 @@
     -webkit-animation: central-image-spin cubic-bezier(.2, 0, 0, 1) 13.5s infinite
     animation: central-image-spin 13.5s infinite
 
+.center-button
+    position: relative
+    align-items: center
+    justify-content: center
+    text-align: center
+    margin-left: 40%
+    margin-right: 40%
+    width: 20%
+    bottom: 4%
+    @media (max-width: 900px)
+        margin-top: -30px
+        font-size: 0.8em !important
+    @media (min-width: 1250px)
+        margin-bottom: 20px
+        font-size: 1.0em !important
+    @media (max-width: 1250px)
+        margin-top: -20px
+        margin-bottom: 20px
+        font-size: 0.7em !important
 
 @-webkit-keyframes spin-cog
     0%
@@ -70,13 +89,5 @@
     100% 
         transform: rotate(360deg)
 
-.center-button
-    position: relative
-    align-items: center
-    justify-content: center
-    text-align: center
-    margin-left: 40%
-    margin-right: 40%
-    width: 20%
-    bottom: 4%
+
 
