@@ -1,5 +1,11 @@
 @import 'styles.sass'
 
+a.external-link
+    color: $link-color
+    text-decoration: underline
+    font-weight: bold
+    font-style: italic
+
 .right-nav-container
     @extend %small-side-block
     float: left
@@ -47,11 +53,10 @@
     -webkit-animation-delay: 0.25s
     animation: slide-up 4s forwards
     animation-delay: 1.25s
-
+    height: fit-content
     background: linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(51,51,51,1) 10%, rgba(51,51,51,1) 35%, rgba(51,51,51,1) 75%, rgba(15,15,15,1) 100%)
     border-radius: 25px
     border: 6px solid $black
-    max-height: 75vh
     @media (min-width: 900px)
         margin-top: 50px
         margin-bottom: 50px

@@ -27,7 +27,7 @@ describe('MainComponent', () => {
   it(`should update the imgsrc when button is clicked'`, () => {
     const fixture = TestBed.createComponent(MainComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.imgSrc).toEqual('assets/cogspin1.png');
+    expect(app.imgSrc).toEqual('assets/cogspin.png');
     expect(app.imgAltText).toEqual('spinning cog');
     expect(app.buttonImg).toEqual(false);
     app.setCentralImage('verdure');

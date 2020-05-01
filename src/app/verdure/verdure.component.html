@@ -1,7 +1,47 @@
 <div class="flex-block-container-vertical full-page">
+    <div class="left-nav-container">
+        <nav class="left-nav flex-block-container-horizontal-to-vertical"> 
+          <button mat-raised-button class="side-button " color="primary" 
+            routerLink="" routerLinkActive="active">&#60; BACK</button>
+          <a mat-raised-button class="side-button " color="primary" href="https://github.com/TechPriestJon/VerdureApp" 
+            target="_blank">GITHUB</a>
+        </nav>
+      </div>
     <div class="center-block-container">
         <main class="center-block">
-            <p>Data on Verdure</p>
+          <article>
+            <header>
+              <h1>VERDURE</h1>
+            </header>
+            <aside class="right-image-block">
+              <figure>
+                <img src="../../assets/verdureiconfull.png" alt="Verdure App Icon">
+                <figcaption>Verdure App Icon</figcaption>
+              </figure>
+            </aside>
+            <p>I have a bit of a sweet tooth. Keeping healthy is a bit of a struggle for myself and certain others
+              in my family. Also ensuring the right balance of vitamins and minerals can also be difficult for someone
+              who works full time and cannot easily control every aspect of their diet.</p>
+            <p>Not to mention the stress of emigrating and getting married. Its very easy to eat away stress
+              when things in life are out of your control.</p>
+            <p>My Verdure App was designed for me and my family to help track meals and snacks for calories to help
+              get an idea of how to avoid over eating or eating badly. Calorie tracking isn't the be all and end all in
+              weight loss and health, but it plays a part.</p>
+            <p>The App is written in C# .Net and Xamarin with support from .Net Core Libraries and Unit Tested using
+              SpecFlow. This gives it cross-device support which is something I'm keen on integrating into all my projects
+              where possible, and when the funds are available I may extend this with an online web portal and multi-device 
+              support so data isn't tied to a single device.</p>
+            <p>For data storage it currently uses Sqlite, but I may change this to Realm, but data security is something
+              I'd want to really put in place before considering commercialising the App. Also I'm not sure if it would fall under
+              HIPPA Regulations or other health regulations so I'd need to research that before releasing to the public. For
+              the time being this is just for me and the family.</p>
+            <p>The basic App tracks Meals and Snacks, along with their calorie intakes across a day. More advanced versions
+              are planned which track exercise to take it into account when calculating calorie expenditure, some simplified
+              data analysis to help track the most effective balance of calories and exercise for an individual so they can
+              get the most out of their App, and possibly an inclusion of Vitamin and Mineral tracking to ensure the user
+              is eating a balanced diet and isn't deficient in any major elements of diet.</p>
+            <p>GitHub is linked on the side.</p>
+          </article>
         </main>
       </div>
 </div>
