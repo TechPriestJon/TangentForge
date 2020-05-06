@@ -12,13 +12,11 @@ describe('MainComponent', () => {
       declarations: [ MainComponent ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -27,9 +25,11 @@ describe('MainComponent', () => {
   it(`should update the imgsrc when button is clicked'`, () => {
     const fixture = TestBed.createComponent(MainComponent);
     const app = fixture.debugElement.componentInstance;
+
     expect(app.imgSrc).toEqual('assets/cogspin.png');
     expect(app.imgAltText).toEqual('spinning cog');
     expect(app.buttonImg).toEqual(false);
+
     app.setCentralImage('verdure');
     expect(app.imgSrc).toEqual('assets/verdureicon.png');
     expect(app.imgAltText).toEqual('spinning verdure icon');

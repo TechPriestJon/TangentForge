@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataanalysisComponent implements OnInit {
 
-  constructor() { }
+  constructor(   ) { }
 
-  ngOnInit() {
-  }
+  private testblock = {};
+
+  ngOnInit() {  }
 
 }

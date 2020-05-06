@@ -18,6 +18,8 @@ import { MachinelearningComponent } from './machinelearning/machinelearning.comp
 import { PreservationComponent } from './preservation/preservation.component';
 import { B20200428Component } from './blog/b20200428/b20200428.component';
 import { DataAnalysisMainComponent } from './dataanalysis/main/dataanalysis-main.component';
+import { HttpClientModule } from '@angular/common/http';
+import { B20200506Component } from './blog/b20200506/b20200506.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { DataAnalysisMainComponent } from './dataanalysis/main/dataanalysis-main
     MachinelearningComponent,
     PreservationComponent,
     B20200428Component,
-    DataAnalysisMainComponent
+    DataAnalysisMainComponent,
+    B20200506Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
