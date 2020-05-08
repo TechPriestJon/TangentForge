@@ -28,40 +28,22 @@ export class GdpComponent implements OnInit {
     ]; 
   }
 
-  ngOnInit() {
-    this.loadData();
-  }
+  ngOnInit() {  }
 
   loadData(){
     let searchISOCodes = this.gdpService.countryOptions
       .filter(x => x.enabled == true).map(x => x.countryISO2Code);
 
-    console.log(this.gdpService.countryOptions
-      .filter(x => x.enabled == true));
-
-    console.log(searchISOCodes);
     this.gdpService.loadData(searchISOCodes);
-
-    this.data = this.gdpService.data;
   }
 
   private gdpCurrencyFormatter(params) {      
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
       .format(Math.ceil(params.value/100000)*100000).toString();
   }
+
+  public columnDefs: any;
   
-  private formatNumber(number: number) {
-    return (Math.ceil(number/100000)*100000)
-      .toString()
-      .replace(/(\d)(?=(\d{3})+(?!\d))/g, ',');
-  }
-
-  private abc: boolean = false;
-
-  private data: GdpRecord[];
-
-  private columnDefs: any;
-  
-  private gridOptions: any;
+  public gridOptions: any;
 
 }
