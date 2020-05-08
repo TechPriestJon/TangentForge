@@ -10,6 +10,8 @@
 @include mat-core();
 
 @import 'styles';
+@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -38,6 +40,14 @@ $TangentForge-theme: mat-light-theme($TangentForge-primary, $TangentForge-accent
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($TangentForge-theme);
+
+.ag-theme-alpine {
+    @include ag-theme-alpine();
+}
+
+.grid-cell-right{
+    text-align: right;
+}
 
 
 html, body { height: 100%; }

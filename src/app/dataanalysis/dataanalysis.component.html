@@ -16,7 +16,9 @@
         </main>
     </div>
     <div class="right-nav-container">
-        <nav class="right-nav flex-block-container-horizontal-to-vertical">
-        </nav>
-    </div>
+      <nav class="right-nav flex-block-container-horizontal-to-vertical" *ngFor="let project of projectRoutes;">
+        <button mat-raised-button class="side-button" color="primary"
+          routerLink="{{project.path}}" routerLinkActive="active">{{project.path}}</button>
+      </nav>
+  </div>
 </div>

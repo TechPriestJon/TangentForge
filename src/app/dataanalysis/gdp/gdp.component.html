@@ -1,0 +1,15 @@
+<button mat-raised-button class="side-button " color="primary" (click)="loadData()">Load Data</button>
+<div class="country-selection">
+    <div class="country-option" *ngFor="let option of gdpService.countryOptions;">
+        <div><mat-checkbox class="country-option-checkbox" [(ngModel)]="option.enabled"></mat-checkbox></div>
+        <div>{{ option.country }}</div>
+    </div>
+</div>
+<div>
+    <ag-grid-angular #agGrid style="width: 100%; height: 350px;" class="ag-theme-alpine"
+
+    [gridOptions]="gridOptions"
+    [columnDefs]="columnDefs"
+    [showToolPanel]="showToolPanel"
+    [rowData]="gdpService.data"></ag-grid-angular>
+</div>

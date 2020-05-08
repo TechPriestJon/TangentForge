@@ -1,0 +1,14 @@
+<header><h2>2020-05-07</h2></header>
+<p>Burning the Candle at Both Ends.</p>
+<p>Phew. Rushed to get this working, but she's firing on all cyclinders which is a good sign. I decided to
+  implement a CQRS-esk pattern for my data request after I got some lovely data curtosy of the World Bank
+  and their public access API.</p>
+<p>Was able to unit test the entire request which was great, especially after getting the in-request paging
+  code established. Shout out to my new friends concatMap and forkJoin. Merging Observables makes life a lot
+  easier, and it works even when the results of one Observable become the inputs for another.</p>
+<p>I know there are probably a few testing holes and such but this was a rush to get the data in the
+  grid and visibly formatted to look readable at the minimum. When I have time I'll come back and
+  clear it up.</p>
+<p>Again, Ag-Grid provides the grid tool and its working just as well as it was several years ago. Easy
+  to set up and pump data into.</p>
+<p>All the Unit Tests are Green, time to Push and get some much needed rest.</p>

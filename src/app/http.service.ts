@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError, finalize, retry } from "rxjs/operators";
+import { map, catchError, retry } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +10,9 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  get(url: string): Observable<any> {
+  get<T>(url: string): Observable<T> {
     return this.http.get(url).pipe(map(data => {
-      return data;
+      return data as T;
     }),
     retry(3),
     catchError(err => { 
