@@ -9,7 +9,7 @@ import { GdpService } from './gdp.service';
 })
 export class GdpComponent implements OnInit {
 
-  constructor(private gdpService: GdpService) { 
+  constructor(public gdpService: GdpService) { 
     this.gridOptions = {
       columnDefs: this.columnDefs,
       rowData: this.gdpService.data,
